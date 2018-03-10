@@ -1,9 +1,6 @@
 # Cardiovascular Death Prediction
 Files related to an insight data science project focused on predicting death in atherosclerosis patients from the MIMICIII database. 
 
-### Project Explanation
-Machine Learning and Deep Learning to Predict Cardiovascular Complication and Mortality
-
 #### Summary
 Cardiovascular mortality is one of the leading causes of death in the developed world. In this project, I utilize the MIMIC III dataset to explore the application and effectiveness of traditional and state of the art machine learning and deep learning techniques to patients diagnosed with coronary atherosclerosis. While this project focuses on a specific disease, the methods and techniques illustrated here have broad application in analysis of medical and temporal datasets. Source Code for this project can be found on Github.
 
