@@ -7,10 +7,6 @@ Cardiovascular mortality is one of the leading causes of death in the developed 
 #### Problem Background
 An estimated 16.3 million Americans have coronary artery disease, which is ~7% of all U.S. citizens over the age of 20. Coronary artery disease occurs when atherosclerotic plaques, which are made up of cholesterol and other fatty substances, significantly occlude the arteries which provide blood to the heart muscle. The consequences of this disease can range from angina (chest pain) to a rupture of the plaque leading to arterial clot formation and heart tissue death (Myocardial Ischemia). For more information see:
 
-#### AHA Media Player
-Coronary artery disease (CAD) occurs when the inside (the lumen) of one or more coronary arteries narrows, limiting the…
-watchlearnlive.heart.org	
-
 #### Data Set
 For this project I utilized the freely available MIMIC III Database: https://mimic.physionet.org/ . The dataset is made up ~ 47,000 Unique patients with over 650,000 diagnoses. Each patient and diagnosis is composed of a rich list of attributes including patient demographic information, lists of medications, a history of diagnoses and other potentially predictive medical characteristics in patients.
 
@@ -24,7 +20,6 @@ With these datasets we can being to conduct preliminary data analysis on the dem
 Looking at just these three examples, we can see that race seems to have some affect on outcome, as the average patient who dies is more likely to not self classify as white. Similarly, these patients who die are far more likely to be admitted to the ICU via the ER and are more likely to be on Medicare insurance. Of course there are confounders for this data (for example, Medicare patients are also more likely to be older), but with a more extensive analysis, a seemingly reasonable hypothesis would be that applying a machine learning approach on demographic/ admission/ and other data would allow us to predict patients most likely to pass away.
 
 #### Machine Learning
-Random Forest Cross Validation Accuracy versus Number of Features Selected
 To employ a machine learning approach, I created a feature set involving all demographic data available (race, religion, language, insurance type, marriage status, age, sex among others) as well as a naive interpretation of medical history including # of appointments they have been to. Combined, after one-hot encoding our feature set is ~ 120 features. Training a random forest classifier with this data and analyzing the effects of feature number, it appears (without additional hyperparamter optimization) that our optimal cross validation score will be ~ 0.69. Further optimization via gridsearch yields a maximum score of 0.72.
 
 #### Deep Learning
