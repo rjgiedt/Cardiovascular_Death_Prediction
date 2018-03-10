@@ -30,7 +30,7 @@ To get a better predication of this data, an ideal solution would take into acco
 
 Setting up an RNN for our data (see Github for implementation details), I was able to incorporate the diagnoses of individual patients over time, yielding a cross-validated AUC of 0.82, a substantial improvement from the 0.72 cross validation score. While its great that our score increased, frustratingly, RNN (and neural nets in general) while more sophisticated than typical machine learning methods, are nearly uninterpretable black boxes with their hidden layers and other under the hood characteristics.
 
-#### Simplified Attention RNN Model.
+#### Attention RNN Model.
 As a solution for this, the final analysis of this project I implemented was based on a great paper out of Georgia Tech focusing on an interpretable attention RNN for medical data (RETAIN). The idea of an attention RNN is that we will be able to gain information on the hidden layers that we missed in our RNN interpretation above, while still gaining from the sophistication and in this case, time data incorporation, found in an RNN. Altering this model for our purposes and implementing it yielded a cross validated AUC of 0.81, nearly as good as found in our RNN. In addition, this model can also tell us what medical codes were significant when analyzing our data. In checking the most significant medical codes from our data, I found that, unsurprisingly, heart attacks were one of the biggest contributors to death.
 
 #### Conclusions
